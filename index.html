@@ -1,0 +1,441 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rodolfo Poveda Vásquez - Hoja de Vida Interactiva</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1e1e2f;
+            color: #ecf0f1;
+            line-height: 1.6;
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            animation: fadeInDown 1s ease-out;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 20px;
+            color: #bdc3c7;
+            animation: fadeInUp 1s ease-out;
+        }
+        nav {
+            background: #243447;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            transition: background 0.3s;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            display: block;
+            color: #87CEFA;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+            font-weight: 500;
+        }
+        nav a:hover {
+            background: #1E90FF;
+            color: #ffffff;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            background: #2c3e50;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            border-radius: 4px;
+        }
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            color: #1E90FF;
+            border-bottom: 3px solid #1E90FF;
+            padding-bottom: 5px;
+        }
+        .info-list, .competencies-list {
+            list-style: none;
+            padding: 0;
+        }
+        .info-list li, .competencies-list li {
+            margin: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            animation: fadeInLeft 0.5s ease-in-out forwards;
+            opacity: 0;
+        }
+        .info-list li svg, .competencies-list li svg {
+            margin-right: 10px;
+            fill: #1E90FF;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        .experience, .education, .skills, .references, .competencies {
+            margin-bottom: 40px;
+        }
+        .experience-item, .education-item, .reference-item, .competencies-item {
+            background: #34495e;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #1E90FF;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 4px;
+        }
+        .experience-item:hover, .education-item:hover, .reference-item:hover, .competencies-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+        }
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+        a {
+            color: #87CEFA;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #1E90FF;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        /* Competencies List */
+        .competencies-list li {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .competencies-list li .competency-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1E90FF;
+        }
+        .competencies-list li .competency-details {
+            margin-left: 34px;
+            list-style: disc;
+            color: #ecf0f1;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+            header p {
+                font-size: 18px;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 10px 20px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            section {
+                padding: 40px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rodolfo Poveda Vásquez</h1>
+        <p>Tecnólogo en Sistemas de Información</p>
+    </header>
+    <nav>
+        <a href="#perfil">Perfil</a>
+        <a href="#informacion-personal">Información Personal</a>
+        <a href="#academica">Académica</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#competencias">Competencias</a>
+        <a href="#referencias">Referencias</a>
+    </nav>
+    <section id="perfil">
+        <h2 class="section-title">Perfil Profesional</h2>
+        <p>
+            Soy tecnólogo en Sistemas de Información con más de 15 años de experiencia en el diseño, desarrollo e implementación de soluciones tecnológicas innovadoras y de alto impacto. Mi trayectoria profesional incluye el desarrollo de proyectos en diversas áreas como desarrollo web, aplicaciones móviles, inteligencia artificial, chatbots, desarrollo de aplicaciones de escritorio y sitios web dinámicos.
+        </p>
+        <p>
+            Poseo amplios conocimientos en programación y destaco por mi dominio de Python, herramienta clave en la creación de aplicaciones eficientes, escalables y orientadas a resolver problemas complejos. También tengo experiencia en el uso de frameworks modernos como Django, Flask y FastAPI, así como en la implementación de soluciones de machine learning y deep learning.
+        </p>
+        <p>
+            He complementado mi experiencia profesional con formación continua a través de cursos en plataformas reconocidas como Domestika, Udemy y Platzi, consolidando mis habilidades en áreas como inteligencia artificial, desarrollo de chatbots, optimización de aplicaciones y herramientas web avanzadas.
+        </p>
+        <ul class="info-list">
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 5.2-1 7.1-2.7l-1.4-1.4C16.4 9.3 14.4 10 12 10s-4.4-.7-6-2.1L4 9.3C5.9 11 8.5 12 12 12zm0-2c-3.3 0-6-2.7-6-6V2h12v2c0 3.3-2.7 6-6 6z"/>
+                </svg>
+                <strong>Email:</strong>&nbsp;<a href="mailto:rpovedav@gmail.com">rpovedav@gmail.com</a>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 18v-6h4v6h5v-8h3L12 3 2 10h3v8z"/>
+                </svg>
+                <strong>Dirección:</strong> &nbsp;Condominio Residencial Villa Fernanda, KM 8 vía a Neiva
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 10h-3V8c0-3.07-1.63-5.64-4.5-6.32V1.5C13.5.67 12.83 0 12 0S10.5.67 10.5 1.5V1.68C7.63 2.36 6 4.92 6 8v2H3c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zM12 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                </svg>
+                <strong>Teléfono:</strong>&nbsp; <a href="tel:3170237360">3170237360</a>
+            </li>
+        </ul>
+    </section>
+    <section id="informacion-personal">
+        <h2 class="section-title">Información Personal</h2>
+        <ul class="info-list">
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <strong>Nombre:</strong>&nbsp; Rodolfo Poveda Vásquez
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 5.2-1 7.1-2.7l-1.4-1.4C16.4 9.3 14.4 10 12 10s-4.4-.7-6-2.1L4 9.3C5.9 11 8.5 12 12 12zm0-2c-3.3 0-6-2.7-6-6V2h12v2c0 3.3-2.7 6-6 6z"/>
+                </svg>
+                <strong>Documento de Identidad:</strong>&nbsp; 17.658.908 de Florencia
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                </svg>
+                <strong>Fecha de Nacimiento:</strong>&nbsp; 26 de julio de 1978
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zM12 11.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/>
+                </svg>
+                <strong>Lugar de Nacimiento:</strong>&nbsp; Florencia (Caquetá)
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 12c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3-3-1.34-3-3zM8 11v2c0 2.21 1.79 4 4 4s4-1.79 4-4v-2H8zM7 18v-1c0-3.07 1.63-5.64 4.5-6.32V10c0-1.1.9-2 2-2s2 .9 2 2v.68c2.87.68 4.5 3.25 4.5 6.32v1H7z"/>
+                </svg>
+                <strong>Estado Civil:</strong>&nbsp; Soltero
+            </li>
+        </ul>
+    </section>
+    <section id="academica">
+        <h2 class="section-title">Información Académica</h2>
+        <div class="education">
+            <div class="education-item">
+                <h3>Universidad del Tolima</h3>
+                <p><strong>Tecnólogo en Sistemas de Información:</strong> 1999</p>
+            </div>
+            <div class="education-item">
+                <h3>Seminario Menor San José</h3>
+                <p><strong>Bachiller Académico:</strong> 1994</p>
+            </div>
+            <div class="education-item">
+                <h3>Naska Digital</h3>
+                <p><strong>Curso de Animación y Diseño 3D:</strong> 2004</p>
+            </div>
+            <div class="education-item">
+                <h3>Universidad del Rosario</h3>
+                <p><strong>Seminario Servicio al Ciudadano:</strong> 2007</p>
+            </div>
+            <div class="education-item">
+                <h3>Domestika</h3>
+                <p><strong>Inteligencia Artificial para el Diseño y Desarrollo Web:</strong> Curso en Udemy donde aprendí a integrar herramientas de inteligencia artificial en el proceso de diseño y desarrollo de sitios web.</p>
+            </div>
+            <div class="education-item">
+                <h3>Udemy</h3>
+                <p><strong>Desarrollo de Chatbots en Messenger y Python:</strong> Desarrollo de un chatbot para Messenger</p>
+            </div>
+            <div class="education-item">
+                <h3>CURSA</h3>
+                <p><strong>Python y Django para la Inteligencia Artificial:</strong> Desarrollo de sistemas de inteligencia artificial</p>
+            </div>
+            <div class="education-item">
+                <h3>CIBERAULA</h3>
+                <p><strong>Desarrollo de Chatbots con ChatGPT, OpenAI y FastAPI con Python:</strong> Integración de la API de OpenAI</p>
+            </div>
+            <div class="education-item">
+                <h3>Udemy</h3>
+                <p><strong>Inteligencia Artificial para el Diseño y Desarrollo Web:</strong> Aprendí a integrar herramientas de inteligencia artificial en el proceso de diseño y desarrollo de sitios web.</p>
+            </div>
+            <div class="education-item">
+                <h3>Platzi</h3>
+                <p><strong>Curso de LangChain:</strong> Construcción de aplicaciones que integran inteligencia artificial, como chatbots con control de memoria y consulta de datos específicos.</p>
+            </div>
+            <div class="education-item">
+                <h3>Platzi</h3>
+                <p><strong>Curso de Python:</strong> Aprendí desde cero a automatizar tareas, desarrollar aplicaciones web, analizar datos y más, consolidando mis habilidades en este lenguaje de programación.</p>
+            </div>
+        </div>
+    </section>
+    <section id="experiencia">
+        <h2 class="section-title">Experiencia Laboral</h2>
+        <div class="experience">
+            <div class="experience-item">
+                <h3>ANALISTA Y GESTOR DE ASISTENCIA</h3>
+                <p><strong>Empresa:</strong> Dirección de Impuestos y Aduanas Nacionales (DIAN)</p>
+                <p><strong>Periodo:</strong> 2006 — 2014</p>
+                <p><strong>Funciones:</strong></p>
+                <ul>
+                    <li>Proveer asistencia personalizada a los contribuyentes en trámites tributarios, aduaneros y cambiarios, resolviendo dudas y guiando en la correcta ejecución de procedimientos.</li>
+                    <li>Ofrecer soporte tecnológico especializado en plataformas digitales de la DIAN, incluyendo sistemas de declaración electrónica, registro de contribuyentes y facturación electrónica.</li>
+                    <li>Capacitar a usuarios internos y externos en el uso eficiente de las herramientas tecnológicas y en la interpretación de normativas tributarias vigentes.</li>
+                    <li>Realizar seguimiento y resolución de casos reportados por contribuyentes, trabajando en conjunto con áreas técnicas y administrativas para garantizar tiempos de respuesta óptimos.</li>
+                    <li>Participar activamente en la implementación de nuevos sistemas tecnológicos, aportando en las fases de prueba y retroalimentación para asegurar una funcionalidad efectiva.</li>
+                    <li>Elaborar informes periódicos sobre el desempeño de las operaciones de asistencia, identificando áreas de mejora y proponiendo estrategias para optimizar la experiencia del contribuyente.</li>
+                    <li>Supervisar y actualizar bases de datos internas relacionadas con la atención al cliente, garantizando la seguridad, integridad y confidencialidad de la información.</li>
+                    <li>Actuar como intermediario entre los contribuyentes y las áreas legales o técnicas de la DIAN para facilitar la resolución de conflictos complejos.</li>
+                </ul>
+                <p><strong>Ciudad:</strong> Bogotá</p>
+            </div>
+            <div class="experience-item">
+                <h3>DOCENTE Y AUXILIAR ADMINISTRATIVO</h3>
+                <p><strong>Empresa:</strong> Diócesis de Florencia</p>
+                <p><strong>Periodo:</strong> 2015 — 2018</p>
+                <p><strong>Funciones:</strong></p>
+                <ul>
+                    <li>Diseñar, planificar y ejecutar programas educativos en áreas como tecnología, ética y valores, adaptando los contenidos a las necesidades de estudiantes de diferentes niveles.</li>
+                    <li>Implementar estrategias pedagógicas innovadoras, incorporando el uso de herramientas tecnológicas para facilitar el aprendizaje interactivo y significativo.</li>
+                    <li>Coordinar y supervisar actividades administrativas relacionadas con la gestión académica, incluyendo la organización de horarios, control de asistencia y manejo de inventarios.</li>
+                    <li>Planificar y ejecutar actividades pastorales y comunitarias, tales como talleres, eventos culturales y programas de capacitación dirigidos a diferentes grupos de la comunidad.</li>
+                    <li>Gestionar la documentación y archivos relacionados con los procesos administrativos y académicos, asegurando la correcta organización y confidencialidad de la información.</li>
+                    <li>Colaborar en la planificación y desarrollo de proyectos institucionales, sirviendo como enlace entre las autoridades eclesiásticas y la comunidad educativa.</li>
+                    <li>Brindar atención y soporte a estudiantes, padres de familia y miembros de la comunidad, ofreciendo orientación y solucionando inquietudes en el marco de los valores institucionales.</li>
+                </ul>
+                <p><strong>Ciudad:</strong> Florencia</p>
+            </div>
+            <div class="experience-item">
+                <h3>CONSULTOR EN DESARROLLO WEB</h3>
+                <p><strong>Empresa:</strong> Magnéticas Agencia Creativa</p>
+                <p><strong>Periodo:</strong> 2022 — 2025</p>
+                <p><strong>Funciones:</strong></p>
+                <ul>
+                    <li>Diseñar y desarrollar sitios web personalizados y adaptados a las necesidades específicas de cada cliente, utilizando tecnologías modernas y prácticas de diseño responsivo.</li>
+                    <li>Realizar el mantenimiento y optimización de sitios web existentes, mejorando su rendimiento, velocidad de carga y seguridad.</li>
+                    <li>Implementar soluciones creativas e innovadoras para proyectos digitales, trabajando en colaboración con equipos multidisciplinarios como diseñadores gráficos, estrategas de marketing y programadores.</li>
+                    <li>Integrar herramientas y servicios externos (APIs, sistemas de pago, etc.) para ampliar las funcionalidades de los proyectos web.</li>
+                    <li>Monitorear y analizar métricas de rendimiento web, utilizando insights para realizar ajustes y optimizaciones orientadas a mejorar la experiencia del usuario.</li>
+                    <li>Liderar sesiones de capacitación con los clientes para asegurar que puedan gestionar y actualizar sus plataformas de manera autónoma.</li>
+                    <li>Desarrollar estrategias de SEO (Search Engine Optimization) para maximizar la visibilidad de los sitios web en motores de búsqueda.</li>
+                    <li>Mantenerse actualizado con las últimas tendencias y tecnologías en desarrollo web para garantizar soluciones modernas y competitivas.</li>
+                </ul>
+                <p><strong>Ciudad:</strong> Florencia</p>
+            </div>
+        </div>
+    </section>
+    <section id="competencias">
+        <h2 class="section-title">Competencias</h2>
+        <ul class="competencies-list">
+            <li class="competencies-item">
+                <div class="competency-title">Desarrollo Web y Móvil</div>
+                <ul class="competency-details">
+                    <li>Diseño y creación de soluciones personalizadas, responsivas y multiplataforma, empleando tecnologías modernas como React, Angular, Flutter y Kotlin.</li>
+                </ul>
+            </li>
+            <li class="competencies-item">
+                <div class="competency-title">Inteligencia Artificial y Machine Learning</div>
+                <ul class="competency-details">
+                    <li>Implementación de modelos predictivos y soluciones inteligentes utilizando librerías como TensorFlow, PyTorch y Scikit-learn.</li>
+                </ul>
+            </li>
+            <li class="competencies-item">
+                <div class="competency-title">Chatbots y Asistentes Virtuales</div>
+                <ul class="competency-details">
+                    <li>Desarrollo e integración de asistentes conversacionales con tecnologías como Rasa, Dialogflow y OpenAI.</li>
+                </ul>
+            </li>
+            <li class="competencies-item">
+                <div class="competency-title">Desarrollo de Escritorio</div>
+                <ul class="competency-details">
+                    <li>Creación de aplicaciones robustas y personalizadas con interfaces gráficas utilizando herramientas como PyQt y Tkinter.</li>
+                </ul>
+            </li>
+            <li class="competencies-item">
+                <div class="competency-title">Bases de Datos y APIs</div>
+                <ul class="competency-details">
+                    <li>Gestión e integración de sistemas relacionales y no relacionales (MySQL, PostgreSQL, MongoDB) y desarrollo de APIs RESTful para servicios interoperables.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section id="referencias">
+        <h2 class="section-title">Referencias Personales</h2>
+        <div class="references">
+            <div class="reference-item">
+                <h3>Hernando Vasquez Villarruel</h3>
+                <p><strong>Director DIAN Seccional Florencia:</strong></p>
+                <p><strong>Teléfono:</strong> <a href="tel:3182886697">318 288 6697</a></p>
+            </div>
+            <div class="reference-item">
+                <h3>Luis Enrique Trujillo López</h3>
+                <p><strong>Gerente General de la Electrificadora del Caquetá:</strong></p>
+                <p><strong>Teléfono:</strong> <a href="tel:3125336400">3125336400</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Rodolfo Poveda Vásquez. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Animate list items on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.info-list li, .competencies-list li');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateX(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
